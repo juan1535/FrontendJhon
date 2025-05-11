@@ -1,5 +1,6 @@
 
 import './main.css';
+import 'sweetalert2/src/sweetalert2.scss'
 import { router } from './router/router';
 const app = document.querySelector("#app");
 const header = document.querySelector("#header");
@@ -18,5 +19,8 @@ div.append(productos, categorias);
 header.append(div);
 
 window.addEventListener('hashchange', () => {
+  router(app)
+});
+window.addEventListener('DOMContentLoaded', () => {
   router(app)
 });
