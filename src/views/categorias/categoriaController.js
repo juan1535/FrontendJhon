@@ -42,5 +42,5 @@ export const categoriaController =  () => {
     }
 
     // Declaración de eventos
-    form.addEventListener('submit', enviar)    
+    form.addEventListener('submit', enviar)
 }

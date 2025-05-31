@@ -4,6 +4,8 @@ import { productoController } from "../views/productos/productoController.js";
 import { categoriasController } from "../views/categorias/categoriasController.js";
 import { categoriaController } from "../views/categorias/categoriaController.js";
 import { editarController } from "../views/categorias/editarController.js";
+import { loginController } from "../views/login/loginController.js";
+import { registroController } from "../views/registro/registroController.js";
 
 
 const routes = {
@@ -26,6 +28,14 @@ const routes = {
   "editarcategoria/:id": {
     "template": "categorias/editar.html",
     controlador: editarController
+  },
+  login: {
+    "template": "login/index.html",
+    controlador: loginController
+  },
+  registro: {
+    "template": "registro/index.html",
+    controlador: registroController
   }
 };
 
@@ -59,10 +69,6 @@ const matchRoute = (hash) => {
         return true
       }
     });
-
-    console.log(params);
-    
-    
 
     if (route === hash) {
       return routes[route];
