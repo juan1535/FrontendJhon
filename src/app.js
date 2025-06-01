@@ -9,21 +9,28 @@ const productos = document.createElement("a");
 const categorias = document.createElement("a");
 const login = document.createElement("a");
 const registro = document.createElement("a");
+const inicio = document.createElement("a")
 productos.textContent = "Productos";
 categorias.textContent = "Categorias";
 login.textContent = "Login"
 registro.textContent = "Registro"
+inicio.textContent = "Inicio"
+
 productos.setAttribute("href", '#productos')
 categorias.setAttribute("href", '#categorias')
 login.setAttribute("href", '#login')
 registro.setAttribute("href", '#registro')
+inicio.setAttribute("href", '#inicio')
+
 header.classList.add('container', 'header')
 div.classList.add('menu')
 productos.classList.add('menu__link')
 categorias.classList.add('menu__link')
 login.classList.add('menu__link')
 registro.classList.add('menu__link')
-div.append(productos, categorias, login, registro);
+inicio.classList.add('menu__link')
+
+div.append(inicio, productos, categorias, login, registro);
 header.append(div);
 
 window.addEventListener('hashchange', () => {
